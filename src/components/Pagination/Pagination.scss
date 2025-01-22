@@ -1,0 +1,70 @@
+@use '../../styles/global/variables' as *;
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0;
+}
+
+.pagination .pagination-item {
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	color: $primary-1;
+	font-size: 12px;
+	cursor: pointer;
+
+	&+.pagination-item {
+		margin-left: 4px;
+	}
+
+	&:hover {
+		background-color: $primary-4;
+	}
+
+	&.pagination-item-active {
+		background-color: $primary-1;
+		color: #FFF;
+	}
+
+	&.pagination-item-ellipsis,
+	&.pagination-item-ellipsis:hover {
+		cursor: default;
+		background-color: #FFF;
+		letter-spacing: 1px;
+		font-size: 16px;
+	}
+}
+
+.pagination .pagination-item-control {
+	border: 1px solid $primary-1;
+	box-sizing: border-box;
+
+	img {
+		width: auto;
+		height: 12px;
+		position: relative;
+	}
+
+	&:first-of-type {
+		margin-right: 8px;
+
+		img {
+			right: 1px;
+		}
+	}
+
+	&:last-of-type {
+		margin-left: 8px;
+
+		img {
+			left: 1px;
+		}
+	}
+}

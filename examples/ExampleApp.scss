@@ -1,0 +1,467 @@
+// FOR THE APP TO SHOW UI TOOLKIT CODE
+@use '../src/styles/global/variables';
+
+// GLOBAL HTML Styling
+html,
+body,
+input,
+textarea,
+select,
+button {
+  font-family: variables.$font;
+}
+
+.app {
+  display: flex;
+}
+
+// UI Navbar
+.ui-nav {
+  background-color: variables.$primary-1;
+  min-height: 100vh;
+  flex: 0 0 115px;
+  border-right: 1px solid #FFF;
+  box-sizing: border-box;
+
+  a {
+    background-color: variables.$primary-1;
+    background-position: 46px 28px;
+    background-repeat: no-repeat;
+    color: variables.$primary-5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    letter-spacing: 0.4px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 0.5px solid variables.$border-color;
+    width: 100%;
+    height: 50px;
+
+    &.active {
+      background-color: #02396A;
+      background-position-x: 46px;
+      border-right: 5px solid variables.$primary-3;
+      outline: none;
+      width: calc(100% - 5px);
+    }
+
+    &.active>span {
+      padding-left: 2.5px;
+    }
+  }
+}
+
+.page-content {
+  flex: 1 0 auto;
+  max-width: calc(100% - 115px);
+  position: relative;
+}
+
+.page-content section {
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.example-content {
+  display: flex;
+}
+
+.example-content-column {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  padding: 32px;
+
+  &.inverse {
+    background-color: variables.$primary-1;
+  }
+}
+
+// GLOBAL Class Selections
+.inline {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// CODE FOR DISPLAY
+.highlight {
+  background-color: variables.$highlight;
+  border-left: 5px solid variables.$secondary-5;
+  border-right: 5px solid variables.$secondary-5;
+  position: relative;
+  margin: 1rem auto;
+  padding: 1rem 12px;
+  width: calc(100% - 10px);
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+
+  .line-2 {
+    padding-left: 25px;
+  }
+
+  .line-3 {
+    padding-left: 35px;
+  }
+
+  .line-4 {
+    padding-left: 45px;
+  }
+
+  .line-5 {
+    padding-left: 55px;
+  }
+
+  .line-6 {
+    padding-left: 65px;
+  }
+
+  .tag {
+    color: variables.$primary-3;
+  }
+
+  .attr {
+    color: variables.$secondary-1;
+  }
+
+  .quote {
+    color: variables.$secondary-3;
+  }
+
+  .content {
+    color: variables.$secondary-4;
+  }
+
+  .jsx {
+    color: variables.$secondary-5;
+  }
+
+  .note {
+    color: variables.$secondary-2;
+  }
+
+  .json {
+    color: variables.$secondary-3;
+  }
+
+  pre {
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 90%;
+    line-height: 1.5;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 5px;
+    text-align: left;
+    white-space: pre;
+    word-wrap: normal;
+
+    .tag {
+      color: variables.$primary-3;
+    }
+
+    .attr {
+      color: variables.$secondary-1;
+    }
+
+    .quote {
+      color: variables.$secondary-3;
+    }
+
+    .content {
+      color: variables.$secondary-4;
+    }
+
+    .jsx {
+      color: variables.$secondary-5;
+    }
+
+    .note {
+      color: variables.$secondary-2;
+    }
+
+    .json {
+      color: variables.$secondary-3;
+    }
+  }
+}
+
+// THEMES for Different Screens
+.light-theme {
+  background-color: variables.$white;
+  float: left;
+  padding: 2% 5%;
+  text-align: center;
+  width: 40%;
+}
+
+.dark-theme {
+  background-color: variables.$primary-1;
+  float: right;
+  padding: 2% 5%;
+  text-align: center;
+  width: 40%;
+}
+
+.dark-theme-lg {
+  background-color: variables.$primary-1;
+  padding: 2% 0 0;
+  width: 100%;
+}
+
+// HOME Page
+.page-content .home {
+  padding-bottom: 220px; // room for abs. positioned footer
+
+  .header {
+    margin-bottom: 2%;
+
+    img {
+      height: 150px;
+    }
+  }
+
+  .code-info {
+    .code-grid {
+      display: flex;
+      flex: 3 auto;
+
+      .react {
+        flex: 1;
+
+        .body-copy {
+          font-size: 18px;
+          padding: 1% 10%;
+
+          a {
+            color: variables.$secondary-1;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .sass {
+        flex: 1;
+        text-align: center;
+
+        img {
+          margin-bottom: 23px;
+          margin-top: 26px;
+          width: 80%;
+        }
+
+        .body-copy {
+          font-size: 18px;
+          padding: 1% 10%;
+
+          a {
+            color: variables.$secondary-1;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .webpack {
+        flex: 1;
+        text-align: center;
+
+        img {
+          width: 70%;
+        }
+
+        .body-copy {
+          font-size: 18px;
+          padding: 1% 10%;
+
+          a {
+            color: variables.$secondary-1;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .documentation {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .body-copy {
+      font-size: 18px;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      a {
+        color: variables.$secondary-1;
+        text-decoration: none;
+      }
+    }
+
+    .highlight {
+      margin-left: 0;
+    }
+  }
+
+  .contact {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: variables.$border-color;
+    display: flex;
+    padding: 12px;
+
+    .spire {
+      height: 150px;
+      margin-left: 2%;
+      margin-top: 10px;
+    }
+
+    .contact-info {
+      text-align: right;
+      width: 62%;
+
+      .header-2 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.navigations {
+  height: 100%;
+  position: relative;
+  display: flex;
+  width: calc(100% - 125px);
+  margin-left: 10px;
+
+  .content {
+    position: relative;
+    flex: 0 0 100%;
+  }
+
+  .footer-example {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+// Typography
+.typography {
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+// Selections
+.selection-wrapper {
+  position: relative;
+}
+
+.radio-example form,
+.checkbox-example form {
+  display: flex;
+
+  .radio+.radio,
+  .checkbox+.checkbox {
+    margin-left: 18px;
+  }
+}
+
+// Tables
+.table-example:not(:first-child),
+.table-search-example,
+.table-fixed-column-example {
+  margin: 48px auto;
+}
+
+.table-fixed-column-example {
+  width: 800px;
+}
+
+// Schedule
+.schedule-example {
+  width: calc(100% - 64px);
+  margin: 48px auto;
+}
+
+// time input
+.time-input-example {
+  margin: 48px 0;
+}
+
+// LOGIN PAGE
+.login-page {
+  background-image: url('../src/assets/img/Login-Image-Bkg_2x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+
+  .form {
+    margin-top: 10%;
+
+    .input-group-inverse {
+      margin: 0;
+    }
+
+    .btn-primary {
+      margin-top: 10px;
+    }
+  }
+}
+
+// Cards
+.cards {
+  .card-sm {
+    margin: 0 auto;
+  }
+
+  .highlight {
+    max-width: 560px;
+  }
+}
+
+
+// Dropdowns
+
+.dropdown-example {
+  display: flex;
+  position: relative;
+  z-index: 1;
+
+  .dropdown-nested {
+    flex: 0 0 33.33%;
+  }
+}
+
+// Constraints
+
+section.constraints-example {
+  background-color: variables.$primary-1;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  max-width: calc(100vw - 115px);
+}
+
+
+// Event Matrix
+
+.event-matrix-example {}

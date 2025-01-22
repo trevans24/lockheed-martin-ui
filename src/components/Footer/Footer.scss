@@ -1,0 +1,33 @@
+@use '../../styles/global/variables';
+@use '../../styles/global/mixins';
+
+.footer {
+  background-color: variables.$white;
+  width: 100%;
+  height: 43px;
+  border-top: 1px solid variables.$primary-4;
+  padding: 0 16px 8px 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .footer-links {
+    @include mixins.link;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+
+    h5 {
+      color: #7D7D7D;
+      margin: 0 5px 0 0;
+    }
+
+    img {
+      position: relative;
+      top: -3px;
+    }
+  }
+}

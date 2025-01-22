@@ -1,0 +1,23 @@
+@use '../../styles/global/variables' as *;
+
+.login-form {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 350px;
+
+  .input-group-inverse {
+    input {
+      background-color: $login-input;
+    }
+  }
+
+  button {
+    background-color: $login-button;
+    margin: 0;
+    width: 100%;
+
+    &:hover {
+      background-color: $login-input;
+    }
+  }
+}

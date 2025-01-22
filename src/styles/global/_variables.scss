@@ -1,0 +1,74 @@
+// MAIN FONT
+$font: 'Lato', sans-serif;
+// BOLD FONT
+$bold: 'Lato', sans-serif;
+
+// Border Radius
+$border-radius: 2px;
+
+// COLORS
+// BASE COLORS
+$black: #000000;
+$white: #FFFFFF;
+$highlight: #fdfdfd;
+
+// Primary
+$primary-1: #034279;
+$primary-2: #2674A7;
+$primary-3: #A33F97;
+$primary-4: #E3E9F0;
+$primary-5: $white;
+
+// Secondary
+$secondary-1: #A37AE2;
+$secondary-2: #FFBE3C;
+$secondary-3: #FF6060;
+$secondary-4: #259D9E;
+$secondary-5: #86AFD8;
+
+// Error Color
+$error: #D0021B;
+$error-2: $secondary-3;
+
+// Drop Down Hover Color
+$hover-color: #EEF1F4;
+$hover-color-2: rgba(238, 241, 244, 0.38);
+
+// Border COLOR
+$border-color: #D4DBE3;
+$border-color-2: #EEEEEE;
+
+// BOX SHADOWS
+$box-shadow-1: 0 1px 3px rgba(0,0,0,0.16), 0 2px 0px rgba(0,0,0,0.05);
+$box-shadow-2: 0 1px 10px rgba(18, 63, 231, 0.15), 0 0 9px rgba(18, 63, 231, 0.15);
+$box-shadow-3: 0 1px 10px rgba(0,0,0,0.16), 0 2px 0px rgba(0,0,0,0.05);
+$box-shadow-4: 1px 1px 7px rgba(0, 0, 0, 0.25), 0 0px 4px rgba(0, 0, 0, 0.22);
+
+// Navbar COLORS
+$secondary-nav-link: #999999;
+$secondary-nav-hover: rgba(227, 223, 240, .61);
+
+// Card Colors
+$card-border: #D4DBE3;
+
+// Calendar Colors
+$calendar-purple: #A37AE2;
+$calendar-orange: #FF7537;
+$calendar-green: #43D692;
+$calendar-blue: #4A86E7;
+
+// Progress Bar
+$progress-background: #336699;
+$progress: #C0D0E2;
+
+// Login Form
+$login-input: rgba(212, 219, 227, 0.39);
+$login-button: #2674A7;
+
+// Schedule
+$schedule-height: 590px;
+$schedule-view-week-header-height: 64px;
+$schedule-view-month-header-height: 48px;
+$week-view-day-cell-height: 36px;
+$week-view-day-column-width: 14.28%;
+$month-view-day-column-width: 14.28%;

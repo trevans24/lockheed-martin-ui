@@ -1,0 +1,8 @@
+.loader {
+  animation: Spinner infinite 2.5s linear;
+}
+
+@keyframes Spinner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

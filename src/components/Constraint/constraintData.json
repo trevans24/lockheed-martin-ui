@@ -1,0 +1,100 @@
+{
+  "programs": [
+    {
+      "name" : "NY 160",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "NY 111",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "MA 1",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CO 303",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CO 720",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "UT B892",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "MA MCA-1",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CA 16123",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "WA 101",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CT 1124",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "NV 1",
+      "type" : "Residential"
+    },
+    {
+      "name" : "WY 12461",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "NY 160",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "NY 111",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "MA 1",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CO 303",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CO 720",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "UT B892",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "MA MCA-1",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CA 16123",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "WA 101",
+      "type" : "Residential"
+    },
+    {
+      "name" : "CT 1124",
+      "type" : "Commercial"
+    },
+    {
+      "name" : "NV 1",
+      "type" : "Residential"
+    },
+    {
+      "name" : "WY 12461",
+      "type" : "Commercial"
+    }
+  ]
+}

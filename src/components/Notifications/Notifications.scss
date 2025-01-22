@@ -1,0 +1,167 @@
+@use '../../styles/global/variables' as *;
+
+@mixin notification {
+	border-bottom: 1px solid $primary-4;
+	overflow-y: auto;
+	padding-top: 9px;
+	position: relative;
+	width: 100%;
+
+	.close {
+		background-image: url('../../assets/img/close.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		border: none;
+		height: 20px;
+		width: 20px;
+		background-color: transparent;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.title {
+		padding-left: 23px;
+	}
+
+	.label {
+		margin-bottom: 5px;
+		margin-top: 5px;
+		padding-left: 23px;
+		text-transform: capitalize;
+	}
+
+	.body-copy {
+		font-size: 12px;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-left: 23px;
+		padding-right: 23px;
+	}
+}
+
+@mixin notification-alert {
+	background-color: $primary-1;
+	border-radius: 50%;
+	color: $white;
+	height: 10px;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: 200;
+	padding: 2px 5px 5px;
+	position: absolute;
+}
+
+@mixin icon-button {
+	background-image: url('../../assets/img/Notification@2x.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	border-bottom: none;
+	border-left: 1px solid $primary-4;
+	border-right: 1px solid $primary-4;
+	border-top: none;
+	height: 100%;
+	width: 55px;
+
+	&:hover {
+		background-color: $secondary-nav-hover;
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus+.icon-dropdown {
+		display: block;
+	}
+}
+
+.navbar {
+	.navbar-control {
+		display: inline-flex;
+		float: right;
+		height: 100%;
+		width: 183px;
+
+		.navbar-icon {
+			@include icon-button;
+		}
+
+		.notification-alert {
+			@include notification-alert;
+			right: 137px;
+			top: 13px;
+		}
+
+		.icon-dropdown {
+			background-color: $white;
+			border-radius: 4px;
+			box-shadow: $box-shadow-1;
+			display: block;
+			max-height: 600px;
+			overflow: auto;
+			position: absolute;
+			right: 115px;
+			top: 46px;
+			width: 262px;
+			z-index: 1;
+
+			&:before {
+				border-bottom: 9px solid $white;
+				border-left: 9px solid transparent;
+				border-right: 9px solid transparent;
+				content: '';
+				display: block;
+				height: 0;
+				position: absolute;
+				right: 30.75px;
+				top: -9px;
+				width: 0;
+			}
+
+			.notifications {
+				border-radius: 4px;
+				display: block;
+				height: 100%;
+				overflow-y: auto;
+
+				.title-bar {
+					background-color: $white;
+					border-bottom: 1px solid $secondary-nav-hover;
+					display: flex;
+					padding-bottom: 15px;
+					padding-left: 23px;
+					position: sticky;
+					height: 32px;
+					top: 0;
+					width: calc(100% - 23px);
+					z-index: 2;
+
+					h3 {
+						color: $primary-1;
+					}
+
+					.notification-alert {
+						@include notification-alert;
+						margin-left: 15px;
+						margin-top: 15px;
+						position: initial;
+					}
+				}
+
+				.notification {
+					@include notification;
+				}
+			}
+		}
+	}
+}

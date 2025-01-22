@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Line 4 Copy 25 + Line 4 Copy 27 + Line 4 Copy 29 + Line 4 Copy 30 + Line 4 Copy 31 Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="13" height="13" rx="6.5"></rect>
+    </defs>
+    <g id="Style-Guide-Copy-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-417.000000, -1942.000000)">
+        <g id="Line-4-Copy-25-+-Line-4-Copy-27-+-Line-4-Copy-29-+-Line-4-Copy-30-+-Line-4-Copy-31-Mask" transform="translate(417.000000, 1942.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#E7E7E7" opacity="0.690065299" xlink:href="#path-1"></use>
+            <path d="M16.7931034,1.19444444 L5.20689655,14.8055556" id="Line-4-Copy-25" stroke="#7D7D7D" stroke-linecap="square" mask="url(#mask-2)"></path>
+            <path d="M8.79310345,1.19444444 L-2.79310345,14.8055556" id="Line-4-Copy-27" stroke="#7D7D7D" stroke-linecap="square" mask="url(#mask-2)"></path>
+            <path d="M12.7931034,1.19444444 L1.20689655,14.8055556" id="Line-4-Copy-29" stroke="#7D7D7D" stroke-linecap="square" mask="url(#mask-2)"></path>
+            <path d="M21.7931034,1.19444444 L10.2068966,14.8055556" id="Line-4-Copy-30" stroke="#7D7D7D" stroke-linecap="square" mask="url(#mask-2)"></path>
+            <path d="M3.79310345,1.19444444 L-7.79310345,14.8055556" id="Line-4-Copy-31" stroke="#7D7D7D" stroke-linecap="square" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

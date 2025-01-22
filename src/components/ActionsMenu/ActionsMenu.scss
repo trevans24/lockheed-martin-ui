@@ -1,0 +1,59 @@
+@use '../../styles/global/variables' as *;
+
+.actions-container {
+	margin-left: auto;
+	position: relative;
+}
+
+.actions-target {
+	width: 12px;
+	height: 12px;
+	background-image: url('../../assets/img/more.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.actions-menu {
+	min-width: 100px;
+	border-radius: 4px;
+	overflow: hidden;
+	background-color: #FFF;
+	box-shadow: 0 2px 6px 1px rgba(3, 66, 121, 0.15);
+	position: absolute;
+	z-index: 3;
+	top: 6px;
+	right: 12px;
+	color: $primary-2;
+	font-weight: 600;
+	font-family: $bold;
+	text-transform: uppercase;
+	transition: transform 0.2s cubic-bezier(0.4, 0.3, 0.2, 1);
+	transform: scale(0);
+	transform-origin: 100% 0;
+
+	&.active {
+		transform: scale(1);
+	}
+
+	&>div {
+		box-sizing: border-box;
+		padding: 12px 24px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		background-color: #FFF;
+		transition: background-color 0.15s ease-out;
+	}
+
+	&>div:hover {
+		background-color: #E3E9F0;
+	}
+
+	img {
+		margin-right: 12px;
+		height: 12px;
+		width: auto;
+	}
+}

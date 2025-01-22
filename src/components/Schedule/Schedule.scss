@@ -1,0 +1,20 @@
+@use '../../styles/global/variables' as *;
+
+.schedule-container {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.schedule-body {
+	display: flex;
+	width: 100%;
+	border: 1px solid $border-color;
+	position: relative;
+	z-index: 1;
+}
+
+.schedule-view {
+	flex: 1 0 auto;
+	display: flex;
+}

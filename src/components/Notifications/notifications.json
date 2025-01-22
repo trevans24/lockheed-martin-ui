@@ -1,0 +1,24 @@
+{
+  "notifications" : [
+    {
+      "title" : "Event Created",
+      "date" : "December 24, 2017",
+      "body" : "Event EVT2017-09-06-0021 has been committed and is scheudled  to start on Thursday, October 19 2017 at 9:30 PM PDT and End on Thursday, October 19 at 13:30 by Grace. This event will include the following programs: SmartAC."
+    },
+    {
+      "title" : "Event Created",
+      "date" : "January 9, 2018",
+      "body" : "Event EVT2017-09-06-0000 has been committed and is scheudled  to start on Tuesday, September 23 2017 at 9:30 PM PDT and End on Tuesday, September 23 2017 at 13:30 by Grace. This event will include the following programs: SmartAC."
+    },
+    {
+      "title" : "Event Created",
+      "date" : "January 10, 2018",
+      "body" : "Event EVT2017-09-06-0000 has been committed and is scheudled  to start on Tuesday, September 23 2017 at 9:30 PM PDT and End on Tuesday, September 23 2017 at 13:30 by Grace. This event will include the following programs: SmartAC."
+    },
+    {
+      "title" : "Event Created",
+      "date" : "January 11, 2018",
+      "body" : "Event EVT2017-09-06-0000 has been committed and is scheudled  to start on Tuesday, September 23 2017 at 9:30 PM PDT and End on Tuesday, September 23 2017 at 13:30 by Grace. This event will include the following programs: SmartAC."
+    }
+  ]
+}

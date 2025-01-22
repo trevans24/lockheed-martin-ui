@@ -1,0 +1,59 @@
+{
+	"groups": [
+		{ "id": 1, "title": "Program ABC", "color": "purple"},
+		{ "id": 2, "title": "Peek Day Pricing", "color": "orange"},
+		{ "id": 3, "title": "Program XYZ", "color": "green"},
+		{ "id": 4, "title": "System Program", "color": "blue"}
+	],
+	"events": [
+		{
+			"start": "2018-01-04 09:00:00",
+			"end": "2018-01-04 14:00:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Completed",
+			"groupId": 1
+		},
+		{
+			"start": "2018-01-07 14:00:00",
+			"end": "2018-01-07 16:20:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Completed",
+			"groupId": 3
+		},
+		{
+			"start": "2018-01-08 13:00:00",
+			"end": "2018-01-08 17:30:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Completed",
+			"groupId": 2
+		},
+		{
+			"start": "2018-01-16 09:00:00",
+			"end": "2018-01-16 17:00:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Reserved",
+			"groupId": 3
+		},
+		{
+			"start": "2018-01-18 07:00:00",
+			"end": "2018-01-18 12:00:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Committed",
+			"groupId": 4
+		},
+		{
+			"start": "2018-01-22 08:00:00",
+			"end": "2018-01-22 10:00:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Committed",
+			"groupId": 2
+		},
+		{
+			"start": "2018-01-26 09:00:00",
+			"end": "2018-01-26 14:00:00",
+			"title": "EVT2017-09-06-0201",
+			"status": "Reserved",
+			"groupId": 1
+		}
+	]
+}

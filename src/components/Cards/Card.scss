@@ -1,0 +1,45 @@
+@use '../../styles/global/variables' as *;
+
+@mixin card {
+  background-color: $white;
+  border: 1px solid $card-border;
+  border-radius: $border-radius;
+
+  .card-title {
+    background-color: $primary-4;
+    height: 45px;
+    padding: 5px 0 0 13px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: left;
+      margin-top: 10px;
+    }
+  }
+
+  .card-body {
+    padding: 10px 13px;
+  }
+}
+
+
+.card-sm {
+  @include card;
+  margin: 2% 0;
+  width: 50%;
+}
+
+.card-lg {
+  @include card;
+  margin: 2% 0;
+  width: 100%;
+}
+
+.notification-card {
+  @include card;
+  height: 135px;
+}

@@ -1,0 +1,96 @@
+@use '../../styles/global/variables' as *;
+
+@mixin nav-button {
+  background-color: $primary-1;
+  background-position: 46px 28px;
+  background-repeat: no-repeat;
+  color: $primary-5;
+  display: block;
+  font-size: 9px;
+  height: 100px;
+  letter-spacing: 0.4px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  &.active {
+    background-color: #02396A;
+    background-position-x: 46px;
+    border-right: 5px solid $primary-3;
+    outline: none;
+    width: calc(100% - 5px);
+  }
+
+  &.active>span {
+    padding-left: 2.5px;
+  }
+
+  span {
+    bottom: 35px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+
+
+.nav {
+  background-color: $primary-1;
+  min-height: 100vh;
+  min-width: 115px;
+  flex: 0 0 115px;
+
+  .nav-brand {
+    padding-top: 10px;
+    width: 100%;
+
+    img {
+      height: 32px;
+      padding-left: 7px;
+      width: 101px;
+    }
+  }
+
+  .nav-buttons {
+    margin-top: 50px;
+
+    .nav-button {
+      @include nav-button;
+
+      &:nth-child(1) {
+        background-image: url('../../assets/img/Active-Operations-Icon@2x.svg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('../../assets/img/Active-Analysis-Icon@2x.svg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('../../assets/img/Active-ParticipantManagement-Icon@2x.svg');
+
+        span {
+          bottom: 20px;
+        }
+      }
+
+      &:nth-child(4) {
+        background-image: url('../../assets/img/Active-ProgramManagement-Icon@2x.svg');
+
+        span {
+          bottom: 20px;
+        }
+      }
+
+      &:nth-child(5) {
+        background-image: url('../../assets/img/Active-DERManagement-Icon@2x.svg');
+        background-position: 49px 28px;
+      }
+
+      &:nth-child(6) {
+        background-image: url('../../assets/img/Admin-Icon@2x.svg');
+      }
+    }
+  }
+}

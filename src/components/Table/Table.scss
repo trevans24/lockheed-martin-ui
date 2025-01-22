@@ -1,0 +1,140 @@
+@use '../../styles/global/variables' as *;
+
+.table-container .settings {
+	top: 10px;
+	right: 0;
+	position: absolute;
+}
+
+// sort indicator
+th.sort-asc div:after,
+th.sort-desc div:after {
+	content: '';
+	width: 0;
+	height: 0;
+	opacity: 0.45;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	display: inline-block;
+	margin-left: 4px;
+}
+
+// active sort indicator
+th.sort-asc div:after {
+	border-top: none;
+	border-bottom: 4px solid #000;
+}
+
+th.sort-desc div:after {
+	border-top: 4px solid #000;
+	border-bottom: none;
+}
+
+// hidden columns
+th.column-hidden,
+td.column-hidden {
+	display: none;
+}
+
+// table with search
+
+.table-search {
+	background-color: $primary-4;
+	height: 120px;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+.table-search header {
+
+	h3 {
+		margin: 0;
+		display: inline-block;
+	}
+}
+
+.table-search form {
+	margin: 18px 0;
+}
+
+
+// table with fixed first column
+
+.table-fixed-container {
+	display: flex;
+}
+
+.table-fixed-container tr:last-of-type td {
+	height: 14px;
+}
+
+.table-fixed-column-container {
+	flex: 0 0 120px;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+}
+
+.table-fixed-column-container table td,
+.table-fixed-column-container table tr:hover td {
+	background-color: #FFF;
+}
+
+.table-fixed-container tr td:first-of-type div:before {
+	content: none;
+}
+
+.table-scroll-container {
+	flex: 0 0 calc(100% - 120px);
+	overflow: auto;
+
+	.settings {
+		top: 18px;
+		right: 8px;
+	}
+}
+
+.table-scroll-container th div {
+	white-space: nowrap;
+}
+
+.table-scroll-container tr:nth-of-type(even) td {
+	background-color: rgba(212, 219, 227, 0.3);
+}
+
+
+// scrollable table with fixed header
+.table-body-container {
+	max-height: 400px;
+	overflow: auto;
+	border-top: 1px solid $border-color;
+	position: relative;
+	z-index: 1;
+
+	tr:first-of-type td {
+		border-top: none;
+	}
+}
+
+.table-body-container+table {
+	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.16), 0 0 0 rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 2;
+}
+
+.table-header-container {
+	padding-right: 14px;
+}
+
+// selectable table
+
+.selectable-table tbody tr {
+	cursor: pointer;
+}
+
+.selectable-table thead th:first-child,
+.selectable-table tbody td:first-child {
+	max-width: 45px;
+}
+
+.selectable-table .checkbox {
+	padding: 0;
+}

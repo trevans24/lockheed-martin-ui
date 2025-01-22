@@ -1,0 +1,111 @@
+@use '../../styles/global/variables' as *;
+
+.modal {
+  background-color: rgba(227, 233, 240, 0.63);
+  height: 100%;
+  left: 0;
+  padding: 20% 36%;
+  position: fixed;
+  top: 0;
+  transition: 500ms ease-in-out;
+  width: 100%;
+  z-index: 1;
+
+  .modal-content {
+    background-color: $white;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-2;
+    height: 262px;
+    position: relative;
+    width: 450px;
+
+    .modal-title {
+      border-bottom: 1px solid $primary-4;
+      height: 45px;
+      padding: 5px 35px;
+
+      div {
+        display: flex;
+
+        .close {
+          position: absolute;
+          right: 35px;
+          top: 19px;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 20px 35px;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 0;
+        margin-top: 7%;
+      }
+    }
+
+    .modal-footer {
+      bottom: 0;
+      display: flex;
+      position: absolute;
+      right: 35px;
+    }
+
+    .modal-footer-children {
+      bottom: 0;
+      display: flex;
+      padding-left: 35px;
+      padding-right: 35px;
+      position: absolute;
+      width: 84.5%;
+
+      .btn-secondary {
+        margin-left: 35px;
+      }
+    }
+  }
+}
+
+.confirmation {
+  background-color: rgba(51, 114, 167, 0.18);
+  display: flex;
+  height: 40px;
+  position: relative;
+  width: 660px;
+
+  .checkbox {
+    background-color: $primary-2;
+    background-image: url('../../assets/img/check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    height: 100%;
+    width: 40px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 8px;
+  }
+
+  .close {
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+}

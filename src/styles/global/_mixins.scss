@@ -1,0 +1,52 @@
+@use '../../styles/global/variables';
+
+@mixin button($bg, $fc) {
+  background-color: $bg;
+  border: none;
+  border-radius: 2px;
+  color: $fc;
+  font-size: 11px;
+  font-weight: 600;
+  height: 40px;
+  padding: 12px 20px;
+  letter-spacing: 0.5px;
+  margin: 5px;
+  min-width: 118px;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $bg;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin link {
+  @include button(transparent, #336699);
+  background-position: left;
+  background-repeat: no-repeat;
+  border: none;
+  font-weight: 700;
+  text-decoration: none;
+  min-width: inherit;
+
+  &:hover {
+    color: variables.$primary-1;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    &:hover {
+      cursor: not-allowed;
+      color: #369;
+    }
+  }
+}

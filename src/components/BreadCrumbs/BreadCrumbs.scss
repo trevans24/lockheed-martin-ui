@@ -1,0 +1,22 @@
+@use '../../styles/global/variables' as *;
+@use '../../styles/global/mixins' as *;
+
+.bread-crumb {
+  display: inline-flex;
+  height: 23px;
+
+  .crumb {
+    @include link;
+    color: $black;
+    height: 0;
+    padding: 0 10px;
+  }
+
+  .crumb.active {
+    color: $secondary-nav-link;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}

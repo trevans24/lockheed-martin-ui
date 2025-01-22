@@ -1,0 +1,64 @@
+@use '../../../styles/global/variables' as *;
+
+.schedule-sidebar {
+	flex: 0 0 165px;
+	padding: 18px 14px 18px 10px;
+	box-sizing: border-box;
+	background-color: rgba(236, 240, 245, 0.68);
+	font-family: $bold;
+	font-weight: 600;
+}
+
+.schedule-sidebar h3 {
+	color: #000;
+	font-size: 14px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	margin-bottom: 18px;
+}
+
+.schedule-filters {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.45);
+}
+
+.schedule-filters li {
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		width: 6px;
+		height: 6px;
+		border-radius: 6px;
+		margin-right: 12px;
+		display: block;
+	}
+
+	span {
+		margin-right: auto;
+	}
+
+	// color coding
+	&.schedule-fill-purple:before {
+		background-color: $calendar-purple;
+	}
+
+	&.schedule-fill-orange:before {
+		background-color: $calendar-orange;
+	}
+
+	&.schedule-fill-green:before {
+		background-color: $calendar-green;
+	}
+
+	&.schedule-fill-blue:before {
+		background-color: $calendar-blue;
+	}
+}

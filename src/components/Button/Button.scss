@@ -1,0 +1,147 @@
+@use '../../styles/global/variables' as *;
+@use '../../styles/global/mixins' as *;
+
+// mediaQuery for scss
+@mixin mediaQuery($break) {
+  @media screen and (max-width: $break) {
+    @content;
+  }
+}
+
+// PRIMARY BUTTON
+.btn-primary {
+  @include button($primary-2, $primary-5);
+
+  &:hover {
+    background-color: $primary-1;
+  }
+}
+
+// SECONDARY BUTTON
+.btn-secondary {
+  @include button($primary-4, #336699);
+
+  &:hover {
+    background-color: #C0D0E2;
+  }
+}
+
+// LINKS AS BUTTONS
+.link {
+  @include link;
+}
+
+.edit {
+  @extend .link;
+  background-image: url('../../assets/img/Edit.png');
+}
+
+.delete {
+  @extend .link;
+  background-image: url('../../assets/img/Trash.png');
+}
+
+.cancel {
+  @extend .link;
+  background-image: url('../../assets/img/Cancel.png');
+}
+
+.add {
+  @extend .link;
+  background-image: url('../../assets/img/Plus-Icon.svg');
+  color: $primary-5;
+
+  &:hover {
+    color: #C0D0E2;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    &:hover {
+      color: $primary-5;
+    }
+  }
+}
+
+// STATIC BUTTONS
+.static-btn {
+  @include button($primary-1, $primary-5);
+  border: 1px solid $border-color-2;
+  font-size: 13px;
+  font-weight: 400;
+  height: 50px;
+  margin: 5px 8px;
+  padding-left: 30px;
+  text-align: left;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: $border-color-2;
+    color: $primary-1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    &:hover {
+      color: $primary-5;
+    }
+  }
+
+  @include mediaQuery(2560px) {
+    width: 469px;
+  }
+
+  @include mediaQuery(1440px) {
+    width: 309px;
+  }
+
+  @include mediaQuery(1280px) {
+    width: 255px;
+  }
+
+  @include mediaQuery(1190px) {
+    width: 225px;
+  }
+
+  @include mediaQuery(1024px) {
+    width: 170px;
+  }
+}
+
+.static-checked {
+  @extend .static-btn;
+  background-color: $border-color-2;
+  background-image: url('../../assets/img/blue-check.svg');
+  background-position: 10px 20px;
+  background-repeat: no-repeat;
+  color: $primary-1;
+
+  &:hover {
+    background-color: $border-color-2;
+    color: $primary-1;
+  }
+}
+
+// Close
+.close {
+  background-image: url('../../assets/img/close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  height: 20px;
+  width: 20px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,222 @@
+@use '../../styles/global/variables' as *;
+
+.dropdown,
+.dropdown-inverse {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown label,
+.dropdown-inverse label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: $bold;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.dropdown-content {
+    position: relative;
+}
+
+// dark theme
+.dropdown-inverse label {
+    color: #EEE;
+    opacity: 0.45;
+}
+
+.dropdown-header {
+    height: 40px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 0 48px 0 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    transition: border-color 0.15s ease-out;
+
+    span {
+        font-size: 13px;
+    }
+
+    svg {
+        position: absolute;
+        right: 18px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 8px;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+.dropdown.active .dropdown-header,
+.dropdown-inverse.active .dropdown-header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    svg {
+        transform: rotateX(180deg);
+    }
+}
+
+// light theme
+.dropdown .dropdown-header {
+    border: 1px solid $border-color;
+    background-color: $primary-5;
+
+    svg path {
+        fill: #000;
+    }
+}
+
+// dark theme
+.dropdown-inverse .dropdown-header {
+    border: 1px solid $primary-1;
+    background-color: #336699;
+    color: $primary-5;
+
+    svg path {
+        fill: #FFF;
+    }
+}
+
+// light theme
+.dropdown.active .dropdown-header,
+.dropdown .dropdown-header:hover {
+    border: 1px solid $primary-1;
+}
+
+
+// dark theme
+.dropdown-inverse.active .dropdown-header,
+.dropdown-inverse .dropdown-header:hover {
+    border: 1px solid $secondary-5;
+}
+
+.dropdown-list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    transition: transform 0.2s cubic-bezier(0.4, 0.3, 0.2, 1);
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+
+    .dropdown.active>.dropdown-content>&,
+    .dropdown-inverse.active>.dropdown-content>& {
+        transform: scaleY(1);
+    }
+}
+
+// light theme
+.dropdown .dropdown-list {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    .dropdown-list-item {
+        background-color: $primary-5;
+
+        &:hover {
+            background-color: #EEF1F4;
+        }
+    }
+}
+
+// dark theme
+.dropdown-inverse .dropdown-list {
+    border-left: 1px solid $secondary-5;
+    border-right: 1px solid $secondary-5;
+    border-bottom: 1px solid $secondary-5;
+
+    .dropdown-list-item {
+        background-color: #336699;
+        color: $primary-5;
+
+        &:hover {
+            background-color: #7c97b3;
+        }
+    }
+}
+
+.dropdown-list-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.15s ease-out;
+
+    .checkbox {
+        margin-right: 18px;
+        position: relative;
+        top: -1px;
+    }
+}
+
+// checkboxes in dark theme dropdown
+.dropdown-inverse.dropdown-nested .checkbox,
+.dropdown-inverse.dropdown-multi .checkbox {
+    div {
+        background-color: #336699;
+    }
+
+    input:checked+div:not(.disabled) {
+        border-color: #FFF;
+        background-color: #FFF;
+        background-image: url('../../assets/img/checkmark-blue.svg');
+    }
+}
+
+.dropdown-list li.select-all {
+    border-bottom: 1px solid $border-color;
+}
+
+// gray arrow
+.dropdown-nested .dropdown-list-item.has-options:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #BDBDBD;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 24px;
+    margin: auto;
+}
+
+.dropdown-nested .dropdown-header {
+    white-space: nowrap;
+}
+
+.dropdown-list-item .dropdown-list {
+    border-left: none;
+    border-top: 1px solid $border-color;
+    position: absolute;
+    left: calc(100% + 1px);
+    top: 0;
+    transform: scale(0);
+    transform-origin: 0 0;
+    transition: transform 0.2s cubic-bezier(0.4, 0.3, 0.2, 1);
+}
+
+.dropdown-list-item.has-options:hover>.dropdown-list {
+    transform: scale(1);
+}

@@ -1,0 +1,115 @@
+@use '../../styles/global/variables' as *;
+
+.constraint {
+  .constraint-wrapper {
+    margin: 0 auto;
+
+    .constraint-header {
+      margin: 0 auto;
+      margin-bottom: 28px;
+      text-align: center;
+      width: 250px;
+
+      .meter-progress {
+        .meter {
+          background: $progress-background;
+          height: 2px;
+          position: relative;
+          left: 30px;
+          width: 187px;
+
+          span {
+            background-color: $progress;
+            display: block;
+            height: 100%;
+            position: relative;
+            width: 50%;
+          }
+        }
+
+        .body-copy-inverse {
+          margin-bottom: 0;
+        }
+      }
+
+      .header-1-inverse {
+        font-size: 28px;
+        letter-spacing: 0;
+        margin-top: 0;
+      }
+    }
+
+    .constraint-body {
+      min-height: 127px;
+      width: 100%;
+
+      .constraint-input {
+        .input-group-inverse {
+          input {
+            width: 347px;
+          }
+        }
+      }
+
+      .constraint-grid {
+        .grid-header {
+          .header-title {
+            float: left;
+
+            .title-inverse {
+              margin-bottom: 8px;
+              opacity: 0.6;
+            }
+
+            .body-copy-inverse {
+              margin-bottom: 0;
+              margin-top: 0;
+            }
+          }
+
+          .search-inverse {
+            float: right;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      button {
+        flex: 0 0;
+        flex-basis: calc(50% - 12px);
+        max-width: calc(50% - 12px);
+        margin: 6px 0;
+      }
+    }
+  }
+
+  .constraint-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    box-shadow: $box-shadow-1;
+    height: 65px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    &>div {
+      margin: 0 auto;
+    }
+
+    button {
+      margin-top: 12px;
+    }
+
+    .btn-primary {
+      float: right;
+    }
+  }
+}

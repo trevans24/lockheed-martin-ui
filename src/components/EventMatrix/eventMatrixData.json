@@ -1,0 +1,107 @@
+[
+	{
+		"title": "Program ABC",
+		"data": {
+			"2018-01-17": {
+				"9:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"10:00": {
+					"value": "4.0",
+					"status": "reserved"
+				}
+			},
+			"2018-01-18": {
+				"8:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"9:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"10:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"18:00": {
+					"value": "4.0",
+					"status": "unavailable"
+				},
+				"19:00": {
+					"value": "4.0",
+					"status": "unavailable"
+				}
+			}
+		}
+	},
+	{
+		"title": "Program XYZ",
+		"data": {
+			"2018-01-17": {
+				"12:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				},
+				"13:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				},
+				"14:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				}
+			},
+			"2018-01-18": {
+				"10:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"11:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"12:00": {
+					"value": "4.0",
+					"status": "reserved"
+				},
+				"14:00": {
+					"value": "4.0",
+					"status": "unavailable"
+				},
+				"15:00": {
+					"value": "4.0",
+					"status": "unavailable"
+				}
+			}
+		}
+	},
+	{
+		"title": "System Program",
+		"data": {
+			"2018-01-17": {
+				"9:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				},
+				"10:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				},
+				"11:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				},
+				"12:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				},
+				"13:00": {
+					"value": "2.0",
+					"status": "unavailable"
+				}
+			}
+		}
+	}
+]

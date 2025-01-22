@@ -1,0 +1,96 @@
+@use '../global/variables' as *;
+
+.table-container {
+	border-radius: 3px;
+	border: 1px solid $border-color;
+	position: relative;
+	z-index: 1;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+// table header cells
+th {
+	background-color: #FFF;
+	font-size: 10px;
+	height: 50px;
+	cursor: pointer;
+	text-align: left;
+}
+
+// table header cell content
+th div {
+	display: flex;
+	align-items: center;
+	position: relative;
+	box-sizing: border-box;
+	padding: 16px;
+	// color: #000;
+	// opacity: 0.45;
+	color: rgba(0, 0, 0, 0.45);
+}
+
+// table row backgrounds/borders
+tr:nth-of-type(odd) td {
+	background-color: rgba(212, 219, 227, 0.16);
+}
+
+// table cells
+tbody td {
+	font-size: 11px;
+	background-color: #FFF;
+	padding: 0;
+	transition: background-color 0.2s ease-out;
+	border-top: 1px solid $border-color;
+}
+
+// table cell content
+tbody td>div {
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	padding: 16px;
+	align-items: center;
+	white-space: nowrap;
+
+	&:only-child {
+		height: 50px;
+	}
+
+	&:not(:only-child) {
+		padding: 8px 16px;
+	}
+}
+
+// hover / selected row
+tbody tr:hover td,
+tbody tr.selected td {
+	background-color: rgba(212, 219, 227, 0.3);
+}
+
+// hover effect blue indicator
+tbody tr td:first-of-type>div:before {
+	content: '';
+	position: absolute;
+	background-color: $primary-1;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+}
+
+tbody tr:hover td:first-of-type>div:before,
+tbody tr.selected td:first-of-type>div:before {
+	opacity: 1;
+}
+
+// table footer (pagination)
+tfoot td:nth-of-type(even),
+tfoot td:nth-of-type(odd) {
+	background-color: #FFF;
+}

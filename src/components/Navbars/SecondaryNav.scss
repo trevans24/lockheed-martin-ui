@@ -1,0 +1,310 @@
+@use '../../styles/global/variables' as *;
+
+@mixin secondary-nav-button {
+  color: $secondary-nav-link;
+  display: block;
+  font-size: 13px;
+  height: calc(100% - 27px);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 27px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 120px;
+
+  span {
+    padding-bottom: 13px;
+  }
+
+  &:active>span {
+    color: $black;
+    border-bottom: 2px solid $primary-3;
+    height: calc(100% - 29px);
+  }
+}
+
+@mixin profile-button {
+  background-image: url('../../assets/img/chevron-down-blue.svg');
+  background-position: 92.5% center;
+  background-repeat: no-repeat;
+  border: none;
+  color: $primary-1;
+  font-size: 15px;
+  font-weight: 200;
+  height: 100%;
+  padding: 0;
+  position: relative;
+  width: 128px;
+
+  &:before,
+  &:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 35px;
+  }
+
+  &:before {
+    background-image: url('../../assets/img/Profile@2x.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    left: 15px;
+  }
+
+  &:hover {
+    background-color: $secondary-nav-hover;
+  }
+}
+
+@mixin profile-dropdown-button {
+  border: none;
+  border-radius: 4px;
+  color: $primary-1;
+  display: block;
+  font-size: 11px;
+  height: 47px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  width: 100%;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $primary-1;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+@mixin icon-button {
+  background-image: url('../../assets/img/Notification@2x.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: none;
+  border-left: 1px solid $primary-4;
+  border-right: 1px solid $primary-4;
+  border-top: none;
+  height: 100%;
+  width: 55px;
+
+  &:hover {
+    background-color: $secondary-nav-hover;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus+.icon-dropdown {
+    display: block;
+  }
+}
+
+@mixin notification {
+  border-bottom: 1px solid $primary-4;
+  overflow-y: auto;
+  padding-top: 9px;
+  position: relative;
+  width: 100%;
+
+  .close {
+    background-image: url('../../assets/img/close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    padding-left: 23px;
+  }
+
+  .label {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 23px;
+    text-transform: capitalize;
+  }
+
+  .body-copy {
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+}
+
+@mixin notification-alert {
+  background-color: $primary-1;
+  border-radius: 50%;
+  color: $white;
+  height: 10px;
+  font-family: arial;
+  font-size: 12px;
+  font-weight: 200;
+  padding: 2px 5px 5px;
+  position: absolute;
+}
+
+
+
+.navbar {
+  background-color: $white;
+  box-shadow: $box-shadow-1;
+  height: 57px;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  .navbar-links {
+    display: inline-flex;
+    height: 100%;
+
+    .navbar-link {
+      @include secondary-nav-button;
+    }
+  }
+
+  .navbar-control {
+    display: inline-flex;
+    float: right;
+    height: 100%;
+    width: 183px;
+
+    .navbar-icon {
+      @include icon-button;
+    }
+
+    .notification-alert {
+      @include notification-alert;
+      right: 137px;
+      top: 13px;
+    }
+
+    .icon-dropdown {
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: $box-shadow-1;
+      display: block;
+      max-height: 600px;
+      overflow: auto;
+      position: absolute;
+      right: 115px;
+      top: 46px;
+      width: 262px;
+      z-index: 1;
+
+      &:before {
+        border-bottom: 9px solid $white;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        right: 30.75px;
+        top: -9px;
+        width: 0;
+      }
+
+      .notifications {
+        border-radius: 4px;
+        display: block;
+        height: 100%;
+        overflow-y: auto;
+
+        .title-bar {
+          background-color: $white;
+          border-bottom: 1px solid $secondary-nav-hover;
+          display: flex;
+          padding-bottom: 15px;
+          padding-left: 23px;
+          position: sticky;
+          height: 32px;
+          top: 0;
+          width: calc(100% - 23px);
+          z-index: 2;
+
+          h3 {
+            color: $primary-1;
+          }
+
+          .notification-alert {
+            @include notification-alert;
+            margin-left: 15px;
+            margin-top: 15px;
+            position: initial;
+          }
+        }
+
+        .notification {
+          @include notification;
+        }
+      }
+    }
+
+    .navbar-profile {
+      @include profile-button;
+    }
+
+    .navbar-profile.active {
+      background-image: url('../../assets/img/chevron-up-blue.svg');
+      background-position: 92.5% center;
+      background-repeat: no-repeat;
+      background-color: $secondary-nav-hover;
+    }
+
+    .profile-dropdown {
+      border-radius: 4px;
+      box-shadow: $box-shadow-1;
+      position: absolute;
+      right: 22px;
+      top: 46px;
+      width: 120px;
+      z-index: 1;
+
+      &:before {
+        border-bottom: 8px solid $white;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        right: 75px;
+        top: -8px;
+        width: 0;
+      }
+
+      .profile-button {
+        @include profile-dropdown-button;
+      }
+    }
+  }
+}
+
+.background {
+  background-color: $secondary-nav-hover;
+}

@@ -1,0 +1,98 @@
+@use '../../../styles/global/variables' as *;
+
+.schedule-header {
+	height: 100px;
+	position: relative;
+	background-color: #FFF;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+}
+
+.schedule-header-button {
+	background-color: rgba(236, 240, 245, 0.68);
+	color: $primary-1;
+	font-size: 12px;
+	border-radius: $border-radius;
+	box-shadow: none;
+	box-sizing: border-box;
+	padding: 14px 32px;
+	border: none;
+	cursor: pointer;
+
+	&.active {
+		background-color: #FFF;
+		box-shadow: $box-shadow-4;
+		font-weight: bolder;
+	}
+}
+
+.schedule-header-button.create-event {
+	background-color: $primary-1;
+	color: #FFF;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+
+.schedule-header-view-controls {
+	display: flex;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 4px;
+}
+
+.schedule-header-date-controls {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.schedule-header-date-controls span {
+	color: $primary-1;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 24px;
+	width: 156px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.schedule-header-date-controls img {
+	height: 14px;
+	width: auto;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+}
+
+.schedule-header-calendar-picker {
+	position: absolute;
+	left: 46px;
+	right: 0;
+	top: 30px;
+	margin: auto;
+	z-index: 1;
+	width: 260px;
+
+	.calendar-picker-header {
+		display: none;
+	}
+
+	.calendar-picker {
+		border-top: 1px solid $border-color;
+		position: absolute;
+		top: 40px;
+	}
+}
+
+.schedule-header-calendar-picker .calendar-picker-input-container {
+	opacity: 0;
+}
