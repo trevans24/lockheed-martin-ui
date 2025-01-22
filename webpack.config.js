@@ -30,14 +30,20 @@ module.exports = {
       },
       {
         test: /\.jpeg$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$|\.jpg$/,
-        loader: 'file-loader',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'src/assets/img'
+          }
+        }
       },
     ],
   },
   devServer: {
     historyApiFallback: true,
     host: '0.0.0.0',
-    port: 3000
+    port: 3000,
   },
   // performance: {
   //   hints: process.env.NODE_ENV === 'production' ? "warning" : false

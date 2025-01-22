@@ -5,7 +5,7 @@ export default class UINav extends Component {
   render() {
     return (
       <nav className="ui-nav">
-        <Link className="logo" to="/"><img src={require("../../assets/img/lockheed-star-white.svg")} alt="lockheed-martin-logo" /></Link>
+        <Link className="logo" to="/"><img src='../../src/assets/img/lockheed-star-white.svg' alt="lockheed-martin-logo" /></Link>
         <NavLink className="active" to="/typography"><span>Typography</span></NavLink>
         <NavLink className="active" to="/buttons"><span>Buttons</span></NavLink>
         <NavLink className="active" to="/inputs"><span>Inputs</span></NavLink>
